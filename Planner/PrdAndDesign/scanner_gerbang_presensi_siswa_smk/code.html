@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Scanner Gerbang - SMK Attendance OS</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error": "#ba1a1a", "outline-variant": "#c3c5d7", "inverse-surface": "#213145", "surface-container": "#e5eeff", "primary-fixed-dim": "#b5c4ff", "surface-container-high": "#dce9ff", "inverse-primary": "#b5c4ff", "on-primary": "#ffffff", "on-secondary-container": "#405681", "secondary-fixed-dim": "#b1c6f9", "outline": "#737686", "on-error-container": "#93000a", "on-error": "#ffffff", "primary": "#003fb1", "on-primary-fixed-variant": "#003dab", "tertiary-fixed-dim": "#68dba9", "on-secondary-fixed-variant": "#304671", "surface-tint": "#1353d8", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#85f8c4", "on-surface-variant": "#434654", "surface-dim": "#cbdbf5", "primary-container": "#1a56db", "surface-bright": "#f8f9ff", "on-background": "#0b1c30", "tertiary-container": "#006f4d", "error-container": "#ffdad6", "background": "#f8f9ff", "surface-variant": "#d3e4fe", "secondary-container": "#b6ccfe", "primary-fixed": "#dbe1ff", "secondary": "#495e8a", "surface": "#f8f9ff", "on-primary-fixed": "#00174d", "inverse-on-surface": "#eaf1ff", "on-secondary-fixed": "#001a41", "surface-container-highest": "#d3e4fe", "on-primary-container": "#d4dcff", "on-surface": "#0b1c30", "on-tertiary-fixed": "#002114", "on-secondary": "#ffffff", "tertiary": "#005439", "secondary-fixed": "#d8e2ff", "surface-container-low": "#eff4ff", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#005137", "on-tertiary-container": "#7ff2be" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter": "1.5rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "margin": "2rem", "space-sm": "0.5rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem" }, fontFamily: { "headline-sm": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-sm": ["Inter"], "label-lg": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "label-md": ["Inter"], "body-lg": ["Inter"] }, fontSize: { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">school</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Scanner Gerbang</span><span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase">Pagi Masuk</span></div><div class="flex items-center gap-1.5 mt-0.5"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Online Gateway</span></div></div></div><div class="flex items-center gap-space-xs"><button aria-label="Beralih Sesi Shift" class="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-xl bg-surface-container text-on-surface-variant hover:text-primary active:bg-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">sync_alt</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-20 bg-surface"><div class="flex flex-col w-full px-margin-mobile pb-space-xl gap-space-md">
+<!-- 1. Mode Switcher & Real-Time Operational Bar -->
+<section class="flex flex-col gap-space-xs mt-space-xs">
+<!-- Shift Segmented Control -->
+<div class="grid grid-cols-2 p-1 bg-surface-container rounded-xl gap-1">
+<button class="flex items-center justify-center gap-space-xs py-2 px-3 rounded-lg bg-surface-container-lowest text-primary shadow-sm font-label-lg text-label-lg transition-all" id="btn-shift-masuk" type="button">
+<span class="material-symbols-outlined text-[18px]">wb_twilight</span>
+<span>Masuk (06:30-07:30)</span>
+</button>
+<button class="flex items-center justify-center gap-space-xs py-2 px-3 rounded-lg text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all" id="btn-shift-pulang" type="button">
+<span class="material-symbols-outlined text-[18px]">routine</span>
+<span>Pulang (14:00-15:30)</span>
+</button>
+</div>
+<!-- Live Gate Time & Countdown Toleransi -->
+<div class="flex items-center justify-between px-space-sm py-2 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">alarm_on</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Toleransi: <strong class="text-primary font-headline-sm text-title-md">07:15 WIB</strong></span>
+</div>
+<div class="flex items-center gap-1 bg-tertiary-container px-2.5 py-1 rounded-full text-on-tertiary-container shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-ping"></span>
+<span class="font-label-sm text-label-sm font-bold tracking-tight">Sisa Waktu: 17 mnt</span>
+</div>
+</div>
+<!-- Quick Counter Summary Chips -->
+<div class="grid grid-cols-3 gap-2">
+<!-- Tepat Waktu -->
+<div class="flex flex-col items-center justify-center p-2 rounded-xl bg-tertiary-container text-on-tertiary-container">
+<span class="font-label-sm text-label-sm uppercase opacity-90">Tepat Waktu</span>
+<span class="font-display-lg text-headline-sm leading-tight font-bold">412</span>
+</div>
+<!-- Terlambat -->
+<div class="flex flex-col items-center justify-center p-2 rounded-xl bg-secondary-container text-on-secondary-container">
+<span class="font-label-sm text-label-sm uppercase opacity-90">Terlambat</span>
+<span class="font-display-lg text-headline-sm leading-tight font-bold text-error">18</span>
+</div>
+<!-- Karcis Dispensasi -->
+<div class="flex flex-col items-center justify-center p-2 rounded-xl bg-surface-container-highest text-on-primary-fixed">
+<span class="font-label-sm text-label-sm uppercase opacity-90">Dispensasi</span>
+<span class="font-display-lg text-headline-sm leading-tight font-bold">3</span>
+</div>
+</div>
+</section>
+<!-- 2. Interactive Camera / Scanner Viewfinder HUD -->
+<section class="relative w-full rounded-2xl overflow-hidden bg-inverse-surface shadow-md">
+<!-- Camera Viewfinder Background Simulation -->
+<div class="relative w-full aspect-[4/3] flex flex-col items-center justify-between p-4">
+<!-- Top Utility Overlays (Torch, Audio, Camera Switch, RFID state) -->
+<div class="w-full flex items-center justify-between z-20">
+<div class="flex items-center gap-2">
+<!-- RFID NFC Beacon -->
+<div class="flex items-center gap-1.5 bg-inverse-surface/80 backdrop-blur-md px-2.5 py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px] animate-pulse">contactless</span>
+<span class="font-label-sm text-label-sm text-inverse-on-surface">RFID Siap</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<!-- Beep Sound Toggle -->
+<button aria-label="Toggle Suara Beep" class="w-10 h-10 rounded-full bg-inverse-surface/80 text-inverse-on-surface flex items-center justify-center hover:bg-surface-tint active:scale-95 transition-all" id="btn-sound-toggle" type="button">
+<span class="material-symbols-outlined text-[20px]" id="sound-icon">volume_up</span>
+</button>
+<!-- Flash / Senter -->
+<button aria-label="Nyalakan Flash" class="w-10 h-10 rounded-full bg-inverse-surface/80 text-inverse-on-surface flex items-center justify-center hover:bg-surface-tint active:scale-95 transition-all" id="btn-torch-toggle" type="button">
+<span class="material-symbols-outlined text-[20px]" id="torch-icon">flash_off</span>
+</button>
+<!-- Switch Camera -->
+<button aria-label="Ganti Kamera" class="w-10 h-10 rounded-full bg-inverse-surface/80 text-inverse-on-surface flex items-center justify-center hover:bg-surface-tint active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">flip_camera_android</span>
+</button>
+</div>
+</div>
+<!-- Center Reticle Frame with Animated Scanner Beam -->
+<div class="relative w-56 h-56 flex items-center justify-center my-auto">
+<!-- Corner Visual Brackets -->
+<div class="absolute top-0 left-0 w-8 h-8 rounded-tl-xl bg-primary-container"></div>
+<div class="absolute top-0 right-0 w-8 h-8 rounded-tr-xl bg-primary-container"></div>
+<div class="absolute bottom-0 left-0 w-8 h-8 rounded-bl-xl bg-primary-container"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 rounded-br-xl bg-primary-container"></div>
+<!-- Inner Mask Ring -->
+<div class="w-48 h-48 rounded-lg bg-surface/5 flex flex-col items-center justify-center relative overflow-hidden backdrop-blur-[1px]">
+<!-- Animated Laser Beam -->
+<div class="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-tertiary-fixed to-transparent shadow-[0_0_12px_#68dba9] animate-[bounce_2.5s_infinite]"></div>
+<!-- Subtle QR Guide Marks -->
+<span class="material-symbols-outlined text-inverse-on-surface/30 text-[72px]">qr_code_2</span>
+</div>
+</div>
+<!-- Bottom Hint Bar -->
+<div class="w-full text-center z-20">
+<p class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-inverse-surface/90 backdrop-blur-md text-inverse-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-tertiary-fixed text-[16px]">qr_code_scanner</span>
+          Arahkan Barcode Siswa atau Tempelkan Kartu RFID
+        </p>
+</div>
+<!-- Tap to Simulate Scan Trigger Overlay Button -->
+<button aria-label="Pindai Ulang Siswa" class="absolute inset-0 w-full h-full opacity-0 z-10" id="btn-simulate-scan" type="button"></button>
+</div>
+</section>
+<!-- 3. Result Card of Last Scanned Student (High Contrast Verified Panel) -->
+<section class="flex flex-col rounded-2xl bg-surface-container-lowest p-space-md shadow-sm gap-space-sm relative overflow-hidden">
+<!-- Top Verified Pill & Scan Timestamp -->
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+        TERVERIFIKASI • HADIR TEPAT WAKTU
+      </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">06:58:14 WIB</span>
+</div>
+<!-- Student Detail Row -->
+<div class="flex items-center gap-space-md pt-1">
+<!-- Student Avatar Placeholder -->
+<div class="relative shrink-0">
+<img class="w-16 h-16 rounded-xl object-cover shadow-inner" data-alt="Close up professional ID card portrait of an Indonesian male vocational high school student named Rizky, wearing a neat white and grey SMK uniform with blue school tie, smiling politely against a clean light grey studio background, crisp daylight lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUrDKMEOBIaIDqlH7_YGhOh8VBHdrEeYxW9PZiQxLQmvub8UOufTg2lgIdPPohHghKzYmyCLg71goCH1bhpEb7IoSo1uHN75SoSOrjefsfiLg2giRUu-sSwQxuDDiQlidmJw8xC9krXg3rbIk81nDqUvfviUHAzoW4A25aNaEkMmN7E5S79uiIhvsnnmnj4K5K6YxR7zDPPbUowiyCP1d1S_EUQ4vO049mtPrPjm0"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary shadow-sm">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+</div>
+<!-- Bio Metadata -->
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-baseline gap-1.5">
+<h2 class="font-headline-sm text-title-md text-on-surface font-bold truncate">Muhammad Rizky Pratama</h2>
+</div>
+<p class="font-label-md text-label-md text-primary font-semibold">XII RPL 1 • Rekayasa Perangkat Lunak</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-mono mt-0.5">NISN: 0072938192 • Gerbang Timur</p>
+</div>
+</div>
+<!-- Broadcast Status Pill (WhatsApp Gateway Confirmation) -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-tertiary-container text-[20px] shrink-0">mark_chat_read</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-semibold truncate text-on-surface">Notifikasi WA Orang Tua Terkirim</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Bpk. Joko Prasetyo (+62 812-****-890)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">done_all</span>
+</div>
+</section>
+<!-- 4. Tindakan Khusus Piket (Rapid Operational Action Grid) -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-headline-sm text-title-md text-on-surface font-bold">Aksi Petugas Piket</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Shift Aktif: Bpk. Hendra S.Pd</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<!-- Catat Keterlambatan Khusus -->
+<button class="min-h-[52px] flex flex-col items-center justify-center p-2 rounded-xl bg-secondary-container text-on-secondary-container text-center active:scale-98 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[22px]">schedule_send</span>
+<span class="font-label-sm text-label-sm font-bold mt-1 leading-tight">Toleransi Izin</span>
+</button>
+<!-- Cari Manual / NISN -->
+<button class="min-h-[52px] flex flex-col items-center justify-center p-2 rounded-xl bg-primary-container text-on-primary text-center active:scale-98 transition-transform shadow-sm" id="btn-manual-input" type="button">
+<span class="material-symbols-outlined text-[22px]">keyboard</span>
+<span class="font-label-sm text-label-sm font-bold mt-1 leading-tight">Input Manual</span>
+</button>
+<!-- Buat Karcis Dispensasi -->
+<button class="min-h-[52px] flex flex-col items-center justify-center p-2 rounded-xl bg-surface-container-high text-primary text-center active:scale-98 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[22px]">confirmation_number</span>
+<span class="font-label-sm text-label-sm font-bold mt-1 leading-tight">Karcis Pulang</span>
+</button>
+</div>
+</section>
+<!-- 5. Mini Feed: Log Scan Terkini (Real-Time Roll) -->
+<section class="flex flex-col rounded-2xl bg-surface-container-lowest p-space-md shadow-sm gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">history_toggle_off</span>
+<h3 class="font-headline-sm text-title-md text-on-surface font-bold">Log Scan Terkini</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-mono">Live Sync</span>
+</div>
+<!-- Live Stream Roster Cards -->
+<div class="flex flex-col gap-2">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-label-lg font-bold shrink-0">
+            SA
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Siti Aisyah</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">X TKJ 2 • 06:57:40 WIB</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-md bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold shrink-0">
+          Tepat
+        </span>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-label-lg font-bold shrink-0">
+            BP
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Bagas Pratama</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">XI TKR 1 • 06:56:12 WIB</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-md bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold shrink-0">
+          Tepat
+        </span>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-lg font-bold shrink-0">
+            FN
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Fajar Nugraha</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">XI RPL 2 • 06:54:05 WIB</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shrink-0">
+          Dispensasi
+        </span>
+</div>
+</div>
+<!-- Quick Footer Action -->
+<a class="flex items-center justify-center gap-1 py-2 text-primary font-label-lg text-label-lg font-semibold hover:underline" href="#">
+<span>Lihat 412 riwayat presensi hari ini</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</section>
+</div>
+<script>
+  // Micro-interaction handlers for terminal buttons
+  const shiftMasuk = document.getElementById('btn-shift-masuk');
+  const shiftPulang = document.getElementById('btn-shift-pulang');
+  
+  if (shiftMasuk && shiftPulang) {
+    shiftMasuk.addEventListener('click', () => {
+      shiftMasuk.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      shiftMasuk.classList.remove('text-on-surface-variant');
+      shiftPulang.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      shiftPulang.classList.add('text-on-surface-variant');
+    });
+
+    shiftPulang.addEventListener('click', () => {
+      shiftPulang.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      shiftPulang.classList.remove('text-on-surface-variant');
+      shiftMasuk.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      shiftMasuk.classList.add('text-on-surface-variant');
+    });
+  }
+
+  // Audio Beep Toggle State
+  const soundBtn = document.getElementById('btn-sound-toggle');
+  const soundIcon = document.getElementById('sound-icon');
+  let isSoundOn = true;
+
+  if (soundBtn && soundIcon) {
+    soundBtn.addEventListener('click', () => {
+      isSoundOn = !isSoundOn;
+      soundIcon.textContent = isSoundOn ? 'volume_up' : 'volume_off';
+      soundBtn.classList.toggle('text-error', !isSoundOn);
+    });
+  }
+
+  // Torch Toggle State
+  const torchBtn = document.getElementById('btn-torch-toggle');
+  const torchIcon = document.getElementById('torch-icon');
+  let isTorchOn = false;
+
+  if (torchBtn && torchIcon) {
+    torchBtn.addEventListener('click', () => {
+      isTorchOn = !isTorchOn;
+      torchIcon.textContent = isTorchOn ? 'flash_on' : 'flash_off';
+      torchBtn.classList.toggle('bg-primary-container', isTorchOn);
+      torchBtn.classList.toggle('text-on-primary', isTorchOn);
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-label-md"><div class="flex justify-around items-center h-20 px-space-xs"><a aria-current="page" class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-0.5 transition-colors text-primary font-label-md" data-path="scanner-gerbang" href="#"><span class="material-symbols-outlined text-[24px]">qr_code_scanner</span><span class="font-label-md text-label-md">Scanner</span></a><a class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="log-terkini" href="#"><span class="material-symbols-outlined text-[24px]">history</span><span class="font-label-md text-label-md">Log Presensi</span></a><a class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="karcis-dispensasi" href="#"><span class="material-symbols-outlined text-[24px]">assignment_late</span><span class="font-label-md text-label-md">Dispensasi</span></a><a class="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profil-petugas" href="#"><span class="material-symbols-outlined text-[24px]">badge</span><span class="font-label-md text-label-md">Petugas</span></a></div></nav></body></html>

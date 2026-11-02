@@ -1,0 +1,216 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+/*
+ * ─────────────────────────────────────────────────────────────────────────────
+ * DESIGN TOKENS — identik dengan mockup PrdAndDesign (code.html tiap folder)
+ * sehingga class seperti bg-surface-container-lowest, text-headline-lg,
+ * p-space-md, font-title-md bekerja persis seperti di desain.
+ * Sumber: Smk Attendance OS DESIGN.md + tailwind.config setiap code.html
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+@theme {
+    /* ── Warna (Material 3 tokens) ─────────────────────────────────────── */
+    --color-background: #f8f9ff;
+    --color-on-background: #0b1c30;
+
+    --color-surface: #f8f9ff;
+    --color-surface-dim: #cbdbf5;
+    --color-surface-bright: #f8f9ff;
+    --color-surface-container-lowest: #ffffff;
+    --color-surface-container-low: #eff4ff;
+    --color-surface-container: #e5eeff;
+    --color-surface-container-high: #dce9ff;
+    --color-surface-container-highest: #d3e4fe;
+    --color-surface-variant: #d3e4fe;
+    --color-on-surface: #0b1c30;
+    --color-on-surface-variant: #434654;
+
+    --color-inverse-surface: #213145;
+    --color-inverse-on-surface: #eaf1ff;
+    --color-inverse-primary: #b5c4ff;
+
+    --color-outline: #737686;
+    --color-outline-variant: #c3c5d7;
+    --color-surface-tint: #1353d8;
+
+    --color-primary: #003fb1;
+    --color-on-primary: #ffffff;
+    --color-primary-container: #1a56db;
+    --color-on-primary-container: #d4dcff;
+    --color-primary-fixed: #dbe1ff;
+    --color-primary-fixed-dim: #b5c4ff;
+    --color-on-primary-fixed: #00174d;
+    --color-on-primary-fixed-variant: #003dab;
+
+    --color-secondary: #495e8a;
+    --color-on-secondary: #ffffff;
+    --color-secondary-container: #b6ccfe;
+    --color-on-secondary-container: #405681;
+    --color-secondary-fixed: #d8e2ff;
+    --color-secondary-fixed-dim: #b1c6f9;
+    --color-on-secondary-fixed: #001a41;
+    --color-on-secondary-fixed-variant: #304671;
+
+    --color-tertiary: #005439;
+    --color-on-tertiary: #ffffff;
+    --color-tertiary-container: #006f4d;
+    --color-on-tertiary-container: #7ff2be;
+    --color-tertiary-fixed: #85f8c4;
+    --color-tertiary-fixed-dim: #68dba9;
+    --color-on-tertiary-fixed: #002114;
+    --color-on-tertiary-fixed-variant: #005137;
+
+    --color-error: #ba1a1a;
+    --color-on-error: #ffffff;
+    --color-error-container: #ffdad6;
+    --color-on-error-container: #93000a;
+
+    /* ── Tipografi: keluarga font ──────────────────────────────────────── */
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    --font-display: 'Plus Jakarta Sans', 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+    /* font-* mengikuti nama token mockup (font-headline-lg, font-title-md, …) */
+    --font-display-lg: var(--font-display);
+    --font-headline-lg: var(--font-display);
+    --font-headline-lg-mobile: var(--font-display);
+    --font-headline-md: var(--font-display);
+    --font-headline-sm: var(--font-display);
+    --font-title-md: var(--font-display);
+
+    --font-body-lg: var(--font-sans);
+    --font-body-md: var(--font-sans);
+    --font-body-sm: var(--font-sans);
+    --font-label-lg: var(--font-sans);
+    --font-label-md: var(--font-sans);
+    --font-label-sm: var(--font-sans);
+
+    /* ── Tipografi: skala ukuran (dengan line-height, weight, tracking) ── */
+    --text-display-lg: 40px;
+    --text-display-lg--line-height: 48px;
+    --text-display-lg--font-weight: 800;
+    --text-display-lg--letter-spacing: -0.02em;
+
+    --text-headline-lg: 32px;
+    --text-headline-lg--line-height: 40px;
+    --text-headline-lg--font-weight: 700;
+    --text-headline-lg--letter-spacing: -0.02em;
+
+    --text-headline-lg-mobile: 26px;
+    --text-headline-lg-mobile--line-height: 32px;
+    --text-headline-lg-mobile--font-weight: 700;
+    --text-headline-lg-mobile--letter-spacing: -0.01em;
+
+    --text-headline-md: 24px;
+    --text-headline-md--line-height: 32px;
+    --text-headline-md--font-weight: 700;
+    --text-headline-md--letter-spacing: -0.01em;
+
+    --text-headline-sm: 20px;
+    --text-headline-sm--line-height: 28px;
+    --text-headline-sm--font-weight: 600;
+
+    --text-title-md: 16px;
+    --text-title-md--line-height: 24px;
+    --text-title-md--font-weight: 600;
+
+    --text-body-lg: 16px;
+    --text-body-lg--line-height: 24px;
+    --text-body-lg--font-weight: 400;
+
+    --text-body-md: 14px;
+    --text-body-md--line-height: 20px;
+    --text-body-md--font-weight: 400;
+
+    --text-body-sm: 12px;
+    --text-body-sm--line-height: 16px;
+    --text-body-sm--font-weight: 400;
+
+    --text-label-lg: 14px;
+    --text-label-lg--line-height: 20px;
+    --text-label-lg--font-weight: 600;
+    --text-label-lg--letter-spacing: 0.01em;
+
+    --text-label-md: 12px;
+    --text-label-md--line-height: 16px;
+    --text-label-md--font-weight: 600;
+    --text-label-md--letter-spacing: 0.02em;
+
+    --text-label-sm: 11px;
+    --text-label-sm--line-height: 14px;
+    --text-label-sm--font-weight: 700;
+    --text-label-sm--letter-spacing: 0.04em;
+
+    /* ── Spacing (nama space-* sesuai mockup) ──────────────────────────── */
+    --spacing-space-xs: 0.25rem;
+    --spacing-space-sm: 0.5rem;
+    --spacing-space-md: 1rem;
+    --spacing-space-lg: 1.5rem;
+    --spacing-space-xl: 2rem;
+    --spacing-gutter: 1.5rem;
+    --spacing-gutter-mobile: 0.75rem;
+    --spacing-margin: 2rem;
+
+    /* ── Radius (nilai mockup: lg=0.25, xl=0.5) ────────────────────────── */
+    --radius-sm: 0.125rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.25rem;
+    --radius-xl: 0.5rem;
+    --radius-full: 9999px;
+
+    /* ── Bayangan tonal (DESIGN.md level 1–3) ──────────────────────────── */
+    --shadow-sm: 0 1px 3px 0 rgba(15, 40, 81, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(15, 40, 81, 0.08), 0 2px 4px -2px rgba(15, 40, 81, 0.04);
+    --shadow-lg: 0 20px 25px -5px rgba(15, 40, 81, 0.15), 0 8px 10px -6px rgba(15, 40, 81, 0.1);
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────── */
+@layer base {
+    html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        background-color: var(--color-surface);
+        color: var(--color-on-surface);
+        font-family: var(--font-body-md);
+        font-size: var(--text-body-md);
+        line-height: var(--text-body-md--line-height);
+    }
+
+    /* Fokus terlihat (a11y) di seluruh kontrol interaktif */
+    :focus-visible {
+        outline: 3px solid rgba(26, 86, 219, 0.3);
+        outline-offset: 1px;
+    }
+
+    /* Angka tabular untuk tabel & jam */
+    .tabular {
+        font-variant-numeric: tabular-nums;
+        font-feature-settings: 'tnum';
+    }
+}
+
+/* ── Komponen semantik ringan (dipakai lintas Blade) ───────────────────── */
+@layer components {
+    /* Ikon Material Symbols (font dari Google Fonts, kelas = nama ikon) */
+    .material-symbols-outlined {
+        font-family: 'Material Symbols Outlined';
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+    }
+}

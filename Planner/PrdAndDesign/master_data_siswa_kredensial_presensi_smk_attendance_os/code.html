@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-on-surface":"#eaf1ff","surface-container-lowest":"#ffffff","primary-fixed-dim":"#b5c4ff","on-surface":"#0b1c30","surface-container-highest":"#d3e4fe","on-secondary-fixed-variant":"#304671","on-background":"#0b1c30","on-primary-container":"#d4dcff","on-primary-fixed":"#00174d","surface":"#f8f9ff","secondary-fixed-dim":"#b1c6f9","tertiary-fixed-dim":"#68dba9","primary":"#003fb1","tertiary":"#005439","on-error-container":"#93000a","background":"#f8f9ff","outline-variant":"#c3c5d7","on-error":"#ffffff","on-surface-variant":"#434654","on-secondary-container":"#405681","inverse-primary":"#b5c4ff","surface-container":"#e5eeff","on-tertiary":"#ffffff","primary-container":"#1a56db","on-secondary":"#ffffff","secondary-container":"#b6ccfe","surface-container-high":"#dce9ff","surface-container-low":"#eff4ff","error":"#ba1a1a","on-tertiary-fixed":"#002114","on-tertiary-fixed-variant":"#005137","outline":"#737686","secondary":"#495e8a","secondary-fixed":"#d8e2ff","inverse-surface":"#213145","tertiary-fixed":"#85f8c4","error-container":"#ffdad6","on-secondary-fixed":"#001a41","on-primary-fixed-variant":"#003dab","tertiary-container":"#006f4d","surface-tint":"#1353d8","on-tertiary-container":"#7ff2be","surface-bright":"#f8f9ff","on-primary":"#ffffff","surface-dim":"#cbdbf5","surface-variant":"#d3e4fe","primary-fixed":"#dbe1ff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"1rem","gutter-mobile":"0.75rem","space-lg":"1.5rem","margin":"2rem","space-xs":"0.25rem","margin-mobile":"1rem","space-sm":"0.5rem","gutter":"1.5rem","space-xl":"2rem"},fontFamily:{"body-lg":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"body-md":["Inter"],"body-sm":["Inter"]},fontSize:{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest shrink-0"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[22px]">school</span></div><div class="flex flex-col min-w-0"><span class="font-title-md text-title-md text-on-surface truncate leading-tight">SMK Attendance OS</span><span class="font-label-sm text-label-sm text-secondary truncate uppercase">Sistem Presensi Siswa</span></div></div><div class="px-space-md py-space-sm shrink-0"><div class="bg-surface-container-low px-space-md py-space-sm rounded-xl flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Server Gateway Aktif</span></div><span class="font-label-sm text-label-sm text-on-surface-variant font-mono">v2.6.4</span></div></div><nav class="flex-1 px-space-md py-space-sm flex flex-col gap-space-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-title-md rounded-xl"><span class="px-space-sm pt-space-xs pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Operasional Harian</span><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard-monitoring" href="#">Dashboard Monitoring</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="presensi-gerbang-pulang" href="#">Presensi Gerbang &amp; Pulang</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="presensi-mapel" href="#">Presensi Mapel</a><span class="px-space-sm pt-space-md pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Laporan &amp; Administrasi</span><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="rekap-laporan" href="#">Rekap &amp; Laporan</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="pengajuan-izin-sakit" href="#"><span>Pengajuan Izin &amp; Sakit</span><span class="px-space-xs py-0.5 bg-error-container text-on-error-container font-label-sm text-label-sm rounded-full">4</span></a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="koreksi-data" href="#">Koreksi Data</a><span class="px-space-sm pt-space-md pb-space-xs font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Master Data Sekolah</span><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="data-mata-pelajaran" href="#">Data Mata Pelajaran</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="data-kelas-jurusan" href="#">Data Kelas &amp; Jurusan</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="data-siswa" href="#">Data Siswa</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="data-guru" href="#">Data Guru</a><span class="px-space-sm pt-space-md pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Manajemen Sistem</span><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="jadwal-kalender" href="#">Jadwal &amp; Kalender</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="pengaturan-jam-presensi" href="#">Pengaturan Jam Presensi</a></nav><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-xl flex items-center justify-between shrink-0"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-secondary uppercase">Jaringan RFID</span><span class="font-label-md text-label-md text-on-surface font-semibold">Gerbang 1 &amp; 2 Online</span></div><span class="material-symbols-outlined text-tertiary-container text-[20px]">sensors</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed"><span class="material-symbols-outlined text-[16px]">school</span><span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">SMK 1 TEKNOLOGI</span></div><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-[16px] text-primary">event</span><span class="font-label-sm text-label-sm font-semibold">2026/2027 Ganjil</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span><span class="font-label-sm text-label-sm font-mono font-semibold">07:14:28 WIB</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-surface-container-low rounded-xl p-0.5"><button class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)]">Admin</button><button class="px-space-sm py-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-colors">Kurikulum</button><button class="px-space-sm py-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-colors">Wali Kelas</button><button class="px-space-sm py-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-colors">BK</button></div><button class="relative p-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-error rounded-full ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Drs. H. Mulyono</span><span class="font-label-sm text-label-sm text-secondary">Kepala Tim IT Presensi</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Breadcrumb & Top Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="hover:text-primary cursor-pointer transition-colors">Beranda</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Master Data</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Data Siswa</span>
+</nav>
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Master Data Siswa &amp; Kredensial Presensi</h1>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase">Tahun Ajaran 2026/2027</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+        Kelola direktori siswa aktif, nomor induk (NIS/NISN), pemetaan rombel &amp; jurusan, binding kartu RFID / UID MIFARE, Barcode kartu pelajar, serta verifikasi nomor WhatsApp wali murid untuk gateway notifikasi otomatis.
+      </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-xs shrink-0 flex-wrap">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Sinkronkan Dapodik</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+<span>Cetak Kartu RFID / Pelajar</span>
+</button>
+<div class="relative">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors shadow-sm" id="btn-export-dropdown">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Impor / Ekspor</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-all shadow-md hover:shadow-lg">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Tambah Siswa Baru</span>
+</button>
+</div>
+</div>
+<!-- KPI Metrics 4 Columns -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Total Siswa Aktif</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mt-1">852</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">group</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between border-t-0 bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 100% Terdaftar
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">L: 540 | P: 312</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-primary"></div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Kartu RFID Terpasang</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">846</span>
+<span class="font-title-md text-title-md text-outline">/ 852</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">contactless</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sensors</span> 99.3% Terikat
+        </span>
+<span class="font-label-sm text-label-sm text-error font-medium">6 Belum Binding</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-tertiary-container"></div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">WhatsApp Wali Terverifikasi</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">838</span>
+<span class="font-title-md text-title-md text-outline">/ 852</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[22px]">mark_chat_unread</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> 98.4% Gateway
+        </span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">14 Pending WA</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-secondary"></div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Rombel &amp; Konsentrasi</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mt-1">24 Rombel</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[22px]">account_tree</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">school</span> 3 Jurusan
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Rata-rata 35.5/kls</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-primary-container"></div>
+</div>
+</div>
+<!-- Multi-Level Filtering Toolbar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-sm items-center">
+<!-- Search Field (Monospace / Clear RFID scanner support) -->
+<div class="lg:col-span-4 relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px]">search</span>
+<input class="w-full pl-10 pr-10 py-2 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all placeholder:text-outline" placeholder="Cari nama siswa, NISN, NIS, atau UID RFID..." type="text"/>
+<div class="absolute right-2.5 flex items-center gap-1 bg-surface-container px-1.5 py-0.5 rounded text-[11px] font-mono text-secondary">
+<span class="material-symbols-outlined text-[12px]">qr_code_scanner</span> RFID
+        </div>
+</div>
+<!-- Tingkat Filter -->
+<div class="lg:col-span-2">
+<select class="w-full py-2 px-space-sm rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all cursor-pointer">
+<option>Semua Tingkat (X, XI, XII)</option>
+<option>Kelas XII (Tingkat Akhir)</option>
+<option>Kelas XI (Tingkat Menengah)</option>
+<option>Kelas X (Tingkat Pemula)</option>
+</select>
+</div>
+<!-- Konsentrasi Jurusan -->
+<div class="lg:col-span-2">
+<select class="w-full py-2 px-space-sm rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all cursor-pointer">
+<option>Semua Jurusan</option>
+<option>Rekayasa Perangkat Lunak (RPL)</option>
+<option>Teknik Komputer &amp; Jaringan (TKJ)</option>
+<option>Teknik Kendaraan Ringan (TKR)</option>
+</select>
+</div>
+<!-- Rombel Spesifik -->
+<div class="lg:col-span-2">
+<select class="w-full py-2 px-space-sm rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all cursor-pointer">
+<option>Semua Rombel (24 Rombel)</option>
+<option>XII RPL 1 (36 Siswa)</option>
+<option>XII RPL 2 (36 Siswa)</option>
+<option>XI TKJ 1 (35 Siswa)</option>
+<option>XI TKJ 2 (36 Siswa)</option>
+<option>X TKR 1 (35 Siswa)</option>
+<option>X TKR 2 (35 Siswa)</option>
+</select>
+</div>
+<!-- Status Binding RFID -->
+<div class="lg:col-span-2">
+<select class="w-full py-2 px-space-sm rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all cursor-pointer">
+<option>Status RFID: Semua</option>
+<option>Aktif &amp; Terverifikasi (846)</option>
+<option>Belum Binding (6)</option>
+<option>Kartu Hilang / Rusak (3)</option>
+</select>
+</div>
+</div>
+<!-- Active Filters & Toolbar Secondary -->
+<div class="flex items-center justify-between pt-space-xs flex-wrap gap-space-xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm text-outline uppercase">Filter Terpilih:</span>
+<div class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span>Tingkat: XII</span>
+<button class="hover:text-error"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</div>
+<div class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span>Jurusan: RPL</span>
+<button class="hover:text-error"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</div>
+<button class="text-primary hover:underline font-label-sm text-label-sm ml-space-xs">Reset Semua Filter</button>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Menampilkan 8 dari 852 Siswa</span>
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Muat Ulang Data">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Content Layout (Split: Table 68% / Detail Inspection 32%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT: Main Students Data Table Container (~68%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<!-- Bulk Actions Bar -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<label class="flex items-center gap-2 cursor-pointer pl-space-xs">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-label-md text-label-md text-on-surface font-semibold">1 Siswa Dipilih</span>
+</label>
+<div class="h-4 w-px bg-surface-container-high hidden sm:block"></div>
+<div class="flex items-center gap-1">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+<span>Cetak Barcode Terpilih</span>
+</button>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Kirim Tes WA Ortu</span>
+</button>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">drive_file_move</span>
+<span>Ubah Rombel</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary">Tampilkan:</span>
+<select class="py-1 px-2 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm focus:outline-none">
+<option>10 Baris</option>
+<option>25 Baris</option>
+<option>50 Baris</option>
+</select>
+</div>
+</div>
+<!-- Data Table Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface font-title-md text-[13px] border-b-2 border-surface-container">
+<th class="py-space-sm px-space-md w-10 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-space-sm px-space-md">Identitas Siswa (NISN/NIS)</th>
+<th class="py-space-sm px-space-md">Rombel &amp; Jurusan</th>
+<th class="py-space-sm px-space-md">Kredensial Presensi (RFID/Barcode)</th>
+<th class="py-space-sm px-space-md">Wali &amp; Status WA</th>
+<th class="py-space-sm px-space-md text-right">Presensi Kumulatif</th>
+<th class="py-space-sm px-space-md text-center w-28">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm">
+<!-- Row 1: Selected Student (Muhammad Rizky Pratama) -->
+<tr class="bg-surface-container-low/60 hover:bg-surface-container-low transition-colors cursor-pointer border-l-4 border-primary">
+<td class="py-space-sm px-space-md text-center">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative shrink-0">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm ring-2 ring-primary" data-alt="Close up professional ID portrait of an Indonesian male vocational high school student wearing white school uniform and black tie, clean hair and polite expression with soft studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwBuxs-noJxAR4r6d8ToS_EmchG4I0Yqqd6Rzm5v0PXRwPPQIUWVyYjR3GMSU5Hlj5jTD4wViyc9sPyYkWfk0DCCKGtvBR_3lSegjtbjPfGC_K896ov0UTNjJLILgqIFpZzG_rNFABbm19kLL9k2oNKfy-9WI_N5KB4XBBdqztOeY6hhAIkuVrUVx_VyMeKAZR1BEXBXpL9f6jgrxjyloSc1SkPgBoA3_0fPYHznk"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary-container ring-2 ring-surface-container-lowest" title="Aktif Sekolah"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-[14px] text-on-surface font-bold truncate">Muhammad Rizky Pratama</span>
+<div class="flex items-center gap-1 font-mono text-[11px] text-on-surface-variant">
+<span>NISN: 0072938192</span>
+<span class="text-outline">•</span>
+<span>NIS: 2122.10.045</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="inline-flex items-center w-fit px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-[11px] font-bold">
+                      XII RPL 1
+                    </span>
+<span class="text-[11px] text-on-surface-variant truncate">Rekayasa Perangkat Lunak</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono text-[11px] font-semibold w-fit">
+<span class="material-symbols-outlined text-[13px] text-tertiary-container">contactless</span>
+<span>5A:B2:99:1F</span>
+</div>
+<span class="font-mono text-[10px] text-outline">BRC: BRC-8192</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Bpk. Bambang P.</span>
+<div class="flex items-center gap-1 text-[11px] text-tertiary-container font-mono">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+<span>+62 812-8821-4321</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-title-md text-[13px] text-tertiary-container font-bold font-mono">97.4%</span>
+<span class="font-mono text-[10px] text-on-surface-variant">H:18 I:1 S:0 A:0</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded-lg hover:bg-surface-container text-primary transition-colors" title="Uji Tap Kartu">
+<span class="material-symbols-outlined text-[18px]">sensors</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-secondary transition-colors" title="Ubah Data Siswa">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" title="Opsi Lainnya">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Siswa TKJ (Anindya Larasati) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-space-sm px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative shrink-0">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Portrait photo of an Indonesian female high school student wearing white hijab uniform with SMK badge, friendly smile in clean well-lit educational setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD__dsB5Yy7zcK4_9Vcd8fB14pfL05SGsYD9OHy6EvmqG49datCJJxA0uUiGYzaqFlPLKbcf4l29-0VlGi5IPpNnu_qz_tE8mAab2E9HtHMGdd_jcD9n4934SF0QWnnVVa3BG4kq5NQsswM46rJRC9whCl3v_Ep7qDBR7DU21YX48iVlXAdMHpVMi2HjxNM6xXrRhUZMuSRYVSCSLbx3NjkGcIc3JKxnRE1H2ZberA"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary-container ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-[14px] text-on-surface font-semibold truncate">Anindya Larasati Putri</span>
+<div class="flex items-center gap-1 font-mono text-[11px] text-on-surface-variant">
+<span>NISN: 0078129034</span>
+<span class="text-outline">•</span>
+<span>NIS: 2122.10.012</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="inline-flex items-center w-fit px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] font-bold">
+                      XII RPL 1
+                    </span>
+<span class="text-[11px] text-on-surface-variant truncate">Rekayasa Perangkat Lunak</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono text-[11px] font-semibold w-fit">
+<span class="material-symbols-outlined text-[13px] text-tertiary-container">contactless</span>
+<span>8C:11:4F:90</span>
+</div>
+<span class="font-mono text-[10px] text-outline">BRC: BRC-8193</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Ibu Endang Sri</span>
+<div class="flex items-center gap-1 text-[11px] text-tertiary-container font-mono">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+<span>+62 813-9011-8842</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-title-md text-[13px] text-tertiary-container font-bold font-mono">100%</span>
+<span class="font-mono text-[10px] text-on-surface-variant">H:19 I:0 S:0 A:0</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded-lg hover:bg-surface-container text-primary transition-colors" title="Uji Tap Kartu">
+<span class="material-symbols-outlined text-[18px]">sensors</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Belum Binding Kartu (Fajar Nugroho - Kritis) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer bg-error-container/10">
+<td class="py-space-sm px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative shrink-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary font-bold font-label-lg">
+                        FN
+                      </div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-error ring-2 ring-surface-container-lowest" title="Perlu Kartu Baru"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-[14px] text-on-surface font-semibold truncate">Fajar Dwi Nugroho</span>
+<div class="flex items-center gap-1 font-mono text-[11px] text-on-surface-variant">
+<span>NISN: 0064519920</span>
+<span class="text-outline">•</span>
+<span>NIS: 2122.10.021</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="inline-flex items-center w-fit px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] font-bold">
+                      XII RPL 1
+                    </span>
+<span class="text-[11px] text-on-surface-variant truncate">Rekayasa Perangkat Lunak</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-[10px] font-bold w-fit">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+                      BELUM BINDING
+                    </span>
+<span class="font-mono text-[10px] text-outline">BRC: BRC-8194</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Bpk. Agus Salim</span>
+<div class="flex items-center gap-1 text-[11px] text-tertiary-container font-mono">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+<span>+62 856-4311-2090</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-title-md text-[13px] text-error font-bold font-mono">84.2%</span>
+<span class="font-mono text-[10px] text-on-surface-variant">H:16 I:1 S:1 A:1</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="px-2 py-1 rounded bg-primary text-on-primary font-label-sm text-[11px] flex items-center gap-1 shadow-sm hover:bg-primary-container" title="Pair Kartu Baru">
+<span class="material-symbols-outlined text-[14px]">add_card</span>
+<span>Pair</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: TKR Siswa (Bagus Wicaksono) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-space-sm px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative shrink-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold font-label-lg">
+                        BW
+                      </div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary-container ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-[14px] text-on-surface font-semibold truncate">Bagus Wicaksono</span>
+<div class="flex items-center gap-1 font-mono text-[11px] text-on-surface-variant">
+<span>NISN: 0071192843</span>
+<span class="text-outline">•</span>
+<span>NIS: 2122.20.004</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="inline-flex items-center w-fit px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[11px] font-bold">
+                      XI TKR 1
+                    </span>
+<span class="text-[11px] text-on-surface-variant truncate">Teknik Kendaraan Ringan</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono text-[11px] font-semibold w-fit">
+<span class="material-symbols-outlined text-[13px] text-tertiary-container">contactless</span>
+<span>D4:AA:22:90</span>
+</div>
+<span class="font-mono text-[10px] text-outline">BRC: BRC-4412</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Bpk. Suwarno</span>
+<div class="flex items-center gap-1 text-[11px] text-tertiary-container font-mono">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+<span>+62 821-3948-1120</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-title-md text-[13px] text-tertiary-container font-bold font-mono">94.7%</span>
+<span class="font-mono text-[10px] text-on-surface-variant">H:18 I:0 S:1 A:0</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded-lg hover:bg-surface-container text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">sensors</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: WA Pending (Cantika Dewi) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-space-sm px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative shrink-0">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-bold font-label-lg">
+                        CD
+                      </div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary-container ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-[14px] text-on-surface font-semibold truncate">Cantika Dewi Maharani</span>
+<div class="flex items-center gap-1 font-mono text-[11px] text-on-surface-variant">
+<span>NISN: 0079238491</span>
+<span class="text-outline">•</span>
+<span>NIS: 2122.10.033</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="inline-flex items-center w-fit px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-[11px] font-bold">
+                      XII RPL 2
+                    </span>
+<span class="text-[11px] text-on-surface-variant truncate">Rekayasa Perangkat Lunak</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono text-[11px] font-semibold w-fit">
+<span class="material-symbols-outlined text-[13px] text-tertiary-container">contactless</span>
+<span>EE:09:A3:41</span>
+</div>
+<span class="font-mono text-[10px] text-outline">BRC: BRC-8201</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Ibu Ratna K.</span>
+<div class="flex items-center gap-1 text-[11px] text-secondary font-mono">
+<span class="material-symbols-outlined text-[13px] text-outline">error</span>
+<span>+62 813-0000-xxxx (Verif)</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-title-md text-[13px] text-tertiary-container font-bold font-mono">92.1%</span>
+<span class="font-mono text-[10px] text-on-surface-variant">H:17 I:2 S:0 A:0</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded-lg hover:bg-surface-container text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">sensors</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: TKJ Siswa (Dimas Arya) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-space-sm px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative shrink-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-bold font-label-lg">
+                        DA
+                      </div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary-container ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-[14px] text-on-surface font-semibold truncate">Dimas Arya Pradana</span>
+<div class="flex items-center gap-1 font-mono text-[11px] text-on-surface-variant">
+<span>NISN: 0073381900</span>
+<span class="text-outline">•</span>
+<span>NIS: 2122.30.015</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="inline-flex items-center w-fit px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[11px] font-bold">
+                      XI TKJ 1
+                    </span>
+<span class="text-[11px] text-on-surface-variant truncate">Teknik Komputer Jaringan</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono text-[11px] font-semibold w-fit">
+<span class="material-symbols-outlined text-[13px] text-tertiary-container">contactless</span>
+<span>FA:33:01:88</span>
+</div>
+<span class="font-mono text-[10px] text-outline">BRC: BRC-7721</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Bpk. Hendro W.</span>
+<div class="flex items-center gap-1 text-[11px] text-tertiary-container font-mono">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+<span>+62 812-7744-9912</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-title-md text-[13px] text-tertiary-container font-bold font-mono">94.7%</span>
+<span class="font-mono text-[10px] text-on-surface-variant">H:18 I:1 S:0 A:0</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded-lg hover:bg-surface-container text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">sensors</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Siswa Kelas X (Gita Permata) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-space-sm px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative shrink-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary font-bold font-label-lg">
+                        GP
+                      </div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary-container ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-[14px] text-on-surface font-semibold truncate">Gita Permata Sari</span>
+<div class="flex items-center gap-1 font-mono text-[11px] text-on-surface-variant">
+<span>NISN: 0081029482</span>
+<span class="text-outline">•</span>
+<span>NIS: 2324.10.052</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="inline-flex items-center w-fit px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px] font-bold">
+                      X RPL 1
+                    </span>
+<span class="text-[11px] text-on-surface-variant truncate">Rekayasa Perangkat Lunak</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono text-[11px] font-semibold w-fit">
+<span class="material-symbols-outlined text-[13px] text-tertiary-container">contactless</span>
+<span>44:BC:77:22</span>
+</div>
+<span class="font-mono text-[10px] text-outline">BRC: BRC-9011</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Ibu Siti Aminah</span>
+<div class="flex items-center gap-1 text-[11px] text-tertiary-container font-mono">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+<span>+62 878-1922-0041</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-title-md text-[13px] text-tertiary-container font-bold font-mono">100%</span>
+<span class="font-mono text-[10px] text-on-surface-variant">H:19 I:0 S:0 A:0</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded-lg hover:bg-surface-container text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">sensors</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="p-space-md bg-surface-container-lowest flex items-center justify-between border-t-0 flex-wrap gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Menampilkan 1 - 7 dari 852 data terdaftar</span>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface-container-low text-outline cursor-not-allowed">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center transition-colors">2</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center transition-colors">3</button>
+<span class="px-1 text-outline font-label-sm">...</span>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center transition-colors">122</button>
+<button class="p-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT: Selected Student Credential Detail & Quick Action (~32%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Preview Card: Selected Student -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Kredensial Siswa Terpilih</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-mono text-[11px]">ID #8192</span>
+</div>
+<!-- Student Basic Profile Header -->
+<div class="flex items-center gap-space-md">
+<div class="relative shrink-0">
+<img class="w-16 h-16 rounded-xl object-cover shadow-sm ring-2 ring-primary/40" data-alt="Portrait photography of an Indonesian vocational male student with neat dark hair wearing an Indonesian high school white shirt and tie, sharp resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKZG0CQbHHI_VSm9qs2XPTdZMnjOEOPQWsm1XtpltpLIxIKwyfmoAlG26Dhwdqu1HRbieZzdLhDnGW8PYr17mA0gznQMPGXomb5AWYNBdigPJPAuAVM0UjZHJOHrLtwfsSZrUYULHtUHywEOr-q4IaoWFG_01RfaACbT48J1NuVI7wbn_hXw4pIN75siEBv_EEzZem7rrZEMeZ5Cg-gIAn5IG7Mbfg4JcflSk1_Ww"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary text-[11px]" title="RFID Aktif">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight truncate">Muhammad Rizky Pratama</h3>
+<span class="font-label-md text-label-md text-primary font-semibold">Kelas XII RPL 1 • Absen #21</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Wali Kelas: Bpk. Joko Susilo, M.Kom.</span>
+</div>
+</div>
+<!-- Mockup Visual Electronic Student ID Card -->
+<div class="w-full rounded-xl bg-gradient-to-br from-primary via-primary-container to-secondary p-space-md text-on-primary shadow-lg relative overflow-hidden flex flex-col justify-between h-52">
+<!-- Subtle watermark SVG background -->
+<div class="absolute -right-6 -bottom-6 w-40 h-40 opacity-10 pointer-events-none">
+<svg fill="currentColor" viewbox="0 0 100 100">
+<path d="M50 0 L100 25 L100 75 L50 100 L0 75 L0 25 Z"></path>
+</svg>
+</div>
+<!-- Card Header inside ID -->
+<div class="flex items-start justify-between relative z-10">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-surface-container-lowest/20 backdrop-blur-md flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[16px]">school</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] tracking-widest uppercase font-bold text-on-primary/90 leading-tight">SMK 1 TEKNOLOGI</span>
+<span class="text-[9px] text-on-primary/70 uppercase">KARTU IDENTITAS PRESENSI ELEKTRONIK</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest/20 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-mono">
+<span class="material-symbols-outlined text-[12px]">nfc</span> MIFARE 13.56MHz
+            </div>
+</div>
+<!-- Card Body inside ID -->
+<div class="flex items-center justify-between relative z-10 my-auto">
+<div class="flex flex-col">
+<span class="font-title-md text-[15px] font-bold text-on-primary leading-tight">M. RIZKY PRATAMA</span>
+<span class="font-mono text-[11px] text-on-primary/80">NISN: 0072938192</span>
+<span class="font-label-sm text-[10px] text-tertiary-fixed font-semibold">REKAYASA PERANGKAT LUNAK</span>
+</div>
+<!-- RFID Chip Graphic -->
+<div class="w-10 h-8 rounded bg-secondary-fixed/40 backdrop-blur border border-surface-container-lowest/30 flex flex-col justify-around p-1">
+<div class="w-full h-0.5 bg-surface-container-lowest/60"></div>
+<div class="w-3/4 h-0.5 bg-surface-container-lowest/60"></div>
+<div class="w-full h-0.5 bg-surface-container-lowest/60"></div>
+</div>
+</div>
+<!-- Card Footer: Barcode & QR Code simulation -->
+<div class="flex items-end justify-between relative z-10 bg-surface-container-lowest/15 backdrop-blur-md px-space-sm py-1.5 rounded-lg">
+<div class="flex flex-col">
+<span class="font-mono text-[11px] tracking-wider font-bold">UID: 5A:B2:99:1F</span>
+<span class="font-mono text-[9px] text-on-primary/70">BARCODE: *BRC-8192*</span>
+</div>
+<div class="w-8 h-8 bg-surface-container-lowest rounded p-0.5 flex items-center justify-center">
+<!-- Inline QR Code representation -->
+<svg class="w-full h-full text-on-surface fill-current" viewbox="0 0 24 24">
+<path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm14 0h4v2h-4v-2zm-4 0h2v2h-2v-2zm2 4h4v2h-4v-2zm2-2h2v2h-2v-2zm-4 2h2v2h-2v-2zm4-6h2v2h-2v-2zm-4 0h2v2h-2v-2zm-2-2h2v2h-2v-2z"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Technical Credential Details -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Detail Teknis Hardware</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary-container font-bold">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span> Status Normal
+            </span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm font-label-md text-label-md">
+<div>
+<span class="text-outline text-body-sm block">UID Fisik</span>
+<span class="font-mono text-on-surface font-bold text-[13px]">5A:B2:99:1F</span>
+</div>
+<div>
+<span class="text-outline text-body-sm block">Tipe Kartu</span>
+<span class="text-on-surface font-medium">MIFARE Classic 1K</span>
+</div>
+<div>
+<span class="text-outline text-body-sm block">Gerbang Rutin</span>
+<span class="text-on-surface font-medium">Gate Timur (Lab TI)</span>
+</div>
+<div>
+<span class="text-outline text-body-sm block">Terakhir Tap</span>
+<span class="font-mono text-on-surface font-medium">Hari ini, 06:48 WIB</span>
+</div>
+</div>
+<div class="pt-space-xs bg-surface-container-lowest p-space-sm rounded-lg flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Kontak Wali Terverifikasi</span>
+<span class="font-mono text-body-sm text-on-surface-variant">Ibu Haryati • +62 812-8821-4321</span>
+<span class="text-[11px] text-tertiary-container font-medium">Gateway notifikasi WhatsApp otomatis aktif 100%</span>
+</div>
+</div>
+</div>
+<!-- Quick Actions for this student -->
+<div class="flex flex-col gap-space-xs">
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">nfc</span>
+<span>Tap Ulang / Re-binding Kartu</span>
+</button>
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">chat</span>
+<span>Uji Kirim WhatsApp Notifikasi</span>
+</button>
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">history_edu</span>
+<span>Buku Catatan Pelanggaran &amp; Presensi</span>
+</button>
+</div>
+</div>
+<!-- Quick Alert Widget: Queue for Unbound RFID Cards -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[20px]">assignment_late</span>
+<span class="font-title-md text-[14px] text-on-surface font-bold">Antrean Belum Binding RFID</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">6 Siswa</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Terdapat 6 siswa aktif yang belum memiliki kartu presensi fisik terdaftar untuk sistem pintu gerbang otomatis.
+        </p>
+<!-- Mini Unbound list -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Fajar Dwi Nugroho</span>
+<span class="text-[11px] text-on-surface-variant">XII RPL 1 • NISN: 0064519920</span>
+</div>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-[11px] hover:bg-primary-container">
+              Pair RFID
+            </button>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Satria Wijaya</span>
+<span class="text-[11px] text-on-surface-variant">XI TKR 2 • NISN: 0071940122</span>
+</div>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-[11px] hover:bg-primary-container">
+              Pair RFID
+            </button>
+</div>
+</div>
+<button class="w-full mt-1 py-2 px-space-md rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">qr_code_scanner</span>
+<span>Buka Mode Scan Cepat di Pos OSIS</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Vanilla JS for Micro-Interactions -->
+<script>
+  // Simple interactive dropdown and row selection simulation
+  document.addEventListener('DOMContentLoaded', () => {
+    const rows = document.querySelectorAll('tbody tr');
+    rows.forEach(row => {
+      row.addEventListener('click', (e) => {
+        // Prevent trigger if clicking on explicit action button
+        if (e.target.closest('button') || e.target.closest('input[type="checkbox"]')) return;
+        
+        rows.forEach(r => {
+          r.classList.remove('bg-surface-container-low/60', 'border-l-4', 'border-primary');
+          const cb = r.querySelector('input[type="checkbox"]');
+          if (cb && r !== row) cb.checked = false;
+        });
+
+        row.classList.add('bg-surface-container-low/60', 'border-l-4', 'border-primary');
+        const activeCb = row.querySelector('input[type="checkbox"]');
+        if (activeCb) activeCb.checked = true;
+      });
+    });
+  });
+</script></main></div></body></html>

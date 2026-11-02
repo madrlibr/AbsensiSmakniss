@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-on-surface":"#eaf1ff","surface-container-lowest":"#ffffff","primary-fixed-dim":"#b5c4ff","on-surface":"#0b1c30","surface-container-highest":"#d3e4fe","on-secondary-fixed-variant":"#304671","on-background":"#0b1c30","on-primary-container":"#d4dcff","on-primary-fixed":"#00174d","surface":"#f8f9ff","secondary-fixed-dim":"#b1c6f9","tertiary-fixed-dim":"#68dba9","primary":"#003fb1","tertiary":"#005439","on-error-container":"#93000a","background":"#f8f9ff","outline-variant":"#c3c5d7","on-error":"#ffffff","on-surface-variant":"#434654","on-secondary-container":"#405681","inverse-primary":"#b5c4ff","surface-container":"#e5eeff","on-tertiary":"#ffffff","primary-container":"#1a56db","on-secondary":"#ffffff","secondary-container":"#b6ccfe","surface-container-high":"#dce9ff","surface-container-low":"#eff4ff","error":"#ba1a1a","on-tertiary-fixed":"#002114","on-tertiary-fixed-variant":"#005137","outline":"#737686","secondary":"#495e8a","secondary-fixed":"#d8e2ff","inverse-surface":"#213145","tertiary-fixed":"#85f8c4","error-container":"#ffdad6","on-secondary-fixed":"#001a41","on-primary-fixed-variant":"#003dab","tertiary-container":"#006f4d","surface-tint":"#1353d8","on-tertiary-container":"#7ff2be","surface-bright":"#f8f9ff","on-primary":"#ffffff","surface-dim":"#cbdbf5","surface-variant":"#d3e4fe","primary-fixed":"#dbe1ff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"1rem","gutter-mobile":"0.75rem","space-lg":"1.5rem","margin":"2rem","space-xs":"0.25rem","margin-mobile":"1rem","space-sm":"0.5rem","gutter":"1.5rem","space-xl":"2rem"},fontFamily:{"body-lg":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"body-md":["Inter"],"body-sm":["Inter"]},fontSize:{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest shrink-0"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[22px]">school</span></div><div class="flex flex-col min-w-0"><span class="font-title-md text-title-md text-on-surface truncate leading-tight">SMK Attendance OS</span><span class="font-label-sm text-label-sm text-secondary truncate uppercase">Sistem Presensi Siswa</span></div></div><div class="px-space-md py-space-sm shrink-0"><div class="bg-surface-container-low px-space-md py-space-sm rounded-xl flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Server Gateway Aktif</span></div><span class="font-label-sm text-label-sm text-on-surface-variant font-mono">v2.6.4</span></div></div><nav class="flex-1 px-space-md py-space-sm flex flex-col gap-space-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-title-md rounded-xl"><span class="px-space-sm pt-space-xs pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Operasional Harian</span><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard-monitoring" href="#">Dashboard Monitoring</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="presensi-gerbang-pulang" href="#">Presensi Gerbang &amp; Pulang</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="presensi-mapel" href="#">Presensi Mapel</a><span class="px-space-sm pt-space-md pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Laporan &amp; Administrasi</span><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="rekap-laporan" href="#">Rekap &amp; Laporan</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="pengajuan-izin-sakit" href="#"><span>Pengajuan Izin &amp; Sakit</span><span class="px-space-xs py-0.5 bg-error-container text-on-error-container font-label-sm text-label-sm rounded-full">4</span></a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="koreksi-data" href="#">Koreksi Data</a><span class="px-space-sm pt-space-md pb-space-xs font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Master Data Sekolah</span><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="data-mata-pelajaran" href="#">Data Mata Pelajaran</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="data-kelas-jurusan" href="#">Data Kelas &amp; Jurusan</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="data-siswa" href="#">Data Siswa</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="data-guru" href="#">Data Guru</a><span class="px-space-sm pt-space-md pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Manajemen Sistem</span><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="jadwal-kalender" href="#">Jadwal &amp; Kalender</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-colors" data-path="pengaturan-jam-presensi" href="#">Pengaturan Jam Presensi</a></nav><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-xl flex items-center justify-between shrink-0"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-secondary uppercase">Jaringan RFID</span><span class="font-label-md text-label-md text-on-surface font-semibold">Gerbang 1 &amp; 2 Online</span></div><span class="material-symbols-outlined text-tertiary-container text-[20px]">sensors</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed"><span class="material-symbols-outlined text-[16px]">school</span><span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">SMK 1 TEKNOLOGI</span></div><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-[16px] text-primary">event</span><span class="font-label-sm text-label-sm font-semibold">2026/2027 Ganjil</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span><span class="font-label-sm text-label-sm font-mono font-semibold">07:14:28 WIB</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center bg-surface-container-low rounded-xl p-0.5"><button class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)]">Admin</button><button class="px-space-sm py-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-colors">Kurikulum</button><button class="px-space-sm py-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-colors">Wali Kelas</button><button class="px-space-sm py-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-colors">BK</button></div><button class="relative p-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-error rounded-full ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Drs. H. Mulyono</span><span class="font-label-sm text-label-sm text-secondary">Kepala Tim IT Presensi</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Breadcrumb & Header Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="hover:text-primary transition-colors cursor-pointer">Beranda</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Master Data</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Data Kelas &amp; Jurusan</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Master Data Kelas &amp; Konsentrasi Keahlian</h1>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase font-bold tracking-wider">T.A 2026/2027</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Kelola struktur program keahlian, rombongan belajar (rombel), penetapan wali kelas, kapasitas siswa, dan pemetaan gate presensi gerbang.
+      </p>
+</div>
+<!-- Action Group Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container hover:text-primary transition-all">
+<span class="material-symbols-outlined text-[18px] text-tertiary">cloud_sync</span>
+<span>Sinkronkan Dapodik</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Ekspor Data Rombel</span>
+</button>
+<div class="relative inline-flex">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary-container transition-all" id="btnTambahKelas" onclick="toggleDropdown()">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Tambah Kelas / Rombel</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<div class="hidden absolute right-0 top-full mt-2 w-56 rounded-xl bg-surface-container-lowest shadow-xl p-space-xs z-30 flex flex-col gap-1" id="dropdownTambah">
+<a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface font-label-md text-label-md hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-primary text-[18px]">meeting_room</span>
+<span>+ Rombel Kelas Baru</span>
+</a>
+<a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface font-label-md text-label-md hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-tertiary text-[18px]">domain_add</span>
+<span>+ Konsentrasi Keahlian Baru</span>
+</a>
+<a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface font-label-md text-label-md hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-secondary text-[18px]">upload_file</span>
+<span>Import Excel (Batch)</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Top Metrics Overview Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Konsentrasi Keahlian</span>
+<span class="font-display-lg text-display-lg font-bold text-on-surface mt-1 leading-none">3</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">terminal</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="font-medium text-secondary">RPL, TKJ, TKR Otomotif</span>
+<span class="text-tertiary font-bold">100% Terakreditasi A</span>
+</div>
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full blur-xl pointer-events-none"></div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Total Rombel Aktif</span>
+<span class="font-display-lg text-display-lg font-bold text-on-surface mt-1 leading-none">24</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">view_agenda</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-semibold">X: 8</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-semibold">XI: 8</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-semibold">XII: 8</span>
+</div>
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-secondary/5 rounded-full blur-xl pointer-events-none"></div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Kapasitas &amp; Siswa</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display-lg text-display-lg font-bold text-on-surface leading-none">852</span>
+<span class="font-label-md text-label-md text-outline">/ 864 Siswa</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed/40 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">groups</span>
+</div>
+</div>
+<div class="mt-space-md flex flex-col gap-1">
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 98.6%"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm mt-0.5">
+<span>Sisa 12 Bangku Tersedia</span>
+<span class="font-bold text-tertiary-container">98.6% Okupansi</span>
+</div>
+</div>
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-tertiary/5 rounded-full blur-xl pointer-events-none"></div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Wali Kelas Terpenuhi</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display-lg text-display-lg font-bold text-tertiary-container leading-none">24</span>
+<span class="font-label-md text-label-md text-outline">/ 24 Guru</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed/30 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">verified_user</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="inline-flex items-center gap-1 text-tertiary-container font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+          100% Ditugaskan
+        </span>
+<span class="text-outline">0 Rombel Kosong</span>
+</div>
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-tertiary-container/5 rounded-full blur-xl pointer-events-none"></div>
+</div>
+</div>
+<!-- Jurusan Quick Highlight Banner / Head of Programs -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- RPL Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 font-headline-sm text-headline-sm font-extrabold shadow-sm">
+          R
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Rekayasa Perangkat Lunak</span>
+<span class="px-1.5 py-0.2 bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm rounded uppercase">RPL</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Ka. Prog: Dra. Hj. Ratna Juwita</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-space-xs">
+<span class="font-title-md text-title-md text-on-surface font-bold">286 Siswa</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">8 Rombel</span>
+</div>
+</div>
+<!-- TKJ Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-xl bg-secondary text-on-secondary flex items-center justify-center shrink-0 font-headline-sm text-headline-sm font-extrabold shadow-sm">
+          T
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Teknik Komputer &amp; Jaringan</span>
+<span class="px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded uppercase">TKJ</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Ka. Prog: Ahmad Fadhil, S.T.</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-space-xs">
+<span class="font-title-md text-title-md text-on-surface font-bold">284 Siswa</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">8 Rombel</span>
+</div>
+</div>
+<!-- TKR Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-xl bg-tertiary-container text-on-tertiary flex items-center justify-center shrink-0 font-headline-sm text-headline-sm font-extrabold shadow-sm">
+          O
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Teknik Kendaraan Ringan</span>
+<span class="px-1.5 py-0.2 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm rounded uppercase">TKR</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Ka. Prog: Bambang Haryadi, M.T.</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-space-xs">
+<span class="font-title-md text-title-md text-on-surface font-bold">282 Siswa</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">8 Rombel</span>
+</div>
+</div>
+</div>
+<!-- Primary Tab Switcher & Multi-filter Row -->
+<div class="flex flex-col gap-space-md">
+<!-- Tab Controls -->
+<div class="flex items-center justify-between bg-surface-container-low p-1 rounded-xl w-full sm:w-auto self-start">
+<div class="flex items-center gap-1 w-full sm:w-auto">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-primary font-title-md text-title-md shadow-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+<span>Daftar Kelas &amp; Rombel</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">24</span>
+</button>
+<button class="px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">schema</span>
+<span>Program &amp; Konsentrasi Keahlian</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">3 Jurusan</span>
+</button>
+</div>
+</div>
+<!-- Filters & Search Toolbar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md">
+<!-- Search Input with Barcode/Code trigger vibe -->
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined text-outline absolute left-3.5 top-1/2 -translate-y-1/2 text-[20px]">search</span>
+<input class="w-full pl-11 pr-10 py-2.5 bg-surface-container-low rounded-xl text-on-surface placeholder:text-outline font-body-md text-body-md outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Cari kode kelas, nama rombel, ruangan, atau wali kelas..." type="text"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+<!-- Quick Filter Dropdowns -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Filter Tingkat -->
+<div class="relative inline-flex">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md pl-3.5 pr-8 py-2.5 rounded-xl cursor-pointer outline-none hover:bg-surface-container transition-colors">
+<option>Semua Tingkat</option>
+<option>Kelas X (Sepuluh)</option>
+<option>Kelas XI (Sebelas)</option>
+<option>Kelas XII (Duabelas)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">arrow_drop_down</span>
+</div>
+<!-- Filter Jurusan -->
+<div class="relative inline-flex">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md pl-3.5 pr-8 py-2.5 rounded-xl cursor-pointer outline-none hover:bg-surface-container transition-colors">
+<option>Semua Konsentrasi</option>
+<option>Rekayasa Perangkat Lunak (RPL)</option>
+<option>Teknik Komputer &amp; Jaringan (TKJ)</option>
+<option>Teknik Kendaraan Ringan (TKR)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">arrow_drop_down</span>
+</div>
+<!-- Filter Kapasitas -->
+<div class="relative inline-flex">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md pl-3.5 pr-8 py-2.5 rounded-xl cursor-pointer outline-none hover:bg-surface-container transition-colors">
+<option>Status Kapasitas: Semua</option>
+<option>Tersedia (&lt; 36 Siswa)</option>
+<option>Penuh (36 Siswa)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">arrow_drop_down</span>
+</div>
+<button class="p-2.5 rounded-xl bg-surface-container-low text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Reset Filter">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bento Section: Main Table (Left 8 Cols) + Distribution & RFID Gate Routing (Right 4 Cols) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Table Column (Span 8) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header Utilities -->
+<div class="p-space-md bg-surface-container-low/60 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-md text-title-md text-on-surface font-bold">Rombongan Belajar (Rombel) Terdaftar</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm font-mono">(Menampilkan 8 dari 24 Rombel)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">qr_code_scanner</span>
+<span>Cetak Barcode Kelas</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- High-Density Responsive Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface font-label-md text-label-md border-b-2 border-surface-container">
+<th class="py-3 px-space-md w-10 text-center">
+<input class="rounded text-primary focus:ring-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-3 px-space-md">Rombel &amp; Ruangan</th>
+<th class="py-3 px-space-md">Tingkat &amp; Jurusan</th>
+<th class="py-3 px-space-md">Wali Kelas</th>
+<th class="py-3 px-space-md">Okupansi &amp; Kapasitas</th>
+<th class="py-3 px-space-md">Preferensi Gate Presensi</th>
+<th class="py-3 px-space-md text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-md font-body-md">
+<!-- Row 1: XII RPL 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded text-primary focus:ring-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold group-hover:text-primary transition-colors">XII RPL 1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gedung TI Lantai 2 • R.204</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col items-start gap-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Tingkat XII</span>
+<span class="font-label-sm text-label-sm text-secondary truncate max-w-[150px]">Rekayasa Perangkat Lunak</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-md text-label-md font-bold shrink-0">
+                      JS
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Drs. Joko Susilo, M.Kom</span>
+<span class="font-label-sm text-label-sm text-outline font-mono truncate">NIP. 197804152005011003</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-mono font-semibold text-on-surface">36 / 36</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed/50 text-tertiary-container font-bold text-[10px]">PENUH</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">sensor_door</span>
+                    Gate Timur (Scan 1)
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-primary-fixed transition-colors" title="Lihat Daftar Siswa Rombel">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container transition-colors" title="Edit Rombel">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container hover:text-on-surface transition-colors" title="Menu Lainnya">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: XII RPL 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded text-primary focus:ring-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold group-hover:text-primary transition-colors">XII RPL 2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gedung TI Lantai 2 • R.205</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col items-start gap-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Tingkat XII</span>
+<span class="font-label-sm text-label-sm text-secondary truncate max-w-[150px]">Rekayasa Perangkat Lunak</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md text-label-md font-bold shrink-0">
+                      NH
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Nurul Hidayati, S.Pd</span>
+<span class="font-label-sm text-label-sm text-outline font-mono truncate">NIP. 198211022008012011</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-mono font-semibold text-on-surface">35 / 36</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-medium text-[10px]">1 Sisa</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 97.2%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">sensor_door</span>
+                    Gate Timur (Scan 1)
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-primary-fixed transition-colors" title="Lihat Daftar Siswa Rombel">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container transition-colors" title="Edit Rombel">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container hover:text-on-surface transition-colors" title="Menu Lainnya">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: XI RPL 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded text-primary focus:ring-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold group-hover:text-primary transition-colors">XI RPL 1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gedung TI Lantai 1 • R.102</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col items-start gap-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Tingkat XI</span>
+<span class="font-label-sm text-label-sm text-secondary truncate max-w-[150px]">Rekayasa Perangkat Lunak</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-md text-label-md font-bold shrink-0">
+                      HG
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Hendra Gunawan, S.Kom</span>
+<span class="font-label-sm text-label-sm text-outline font-mono truncate">NIP. 198506192009021004</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-mono font-semibold text-on-surface">36 / 36</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed/50 text-tertiary-container font-bold text-[10px]">PENUH</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">sensor_door</span>
+                    Gate Timur (Scan 2)
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-primary-fixed transition-colors" title="Lihat Daftar Siswa Rombel">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container transition-colors" title="Edit Rombel">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container hover:text-on-surface transition-colors" title="Menu Lainnya">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: X RPL 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded text-primary focus:ring-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold group-hover:text-primary transition-colors">X RPL 1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gedung TI Lantai 1 • R.101</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col items-start gap-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Tingkat X</span>
+<span class="font-label-sm text-label-sm text-secondary truncate max-w-[150px]">Rekayasa Perangkat Lunak</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md text-label-md font-bold shrink-0">
+                      SF
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Siti Fatimah, M.Kom</span>
+<span class="font-label-sm text-label-sm text-outline font-mono truncate">NIP. 199002142014032002</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-mono font-semibold text-on-surface">36 / 36</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed/50 text-tertiary-container font-bold text-[10px]">PENUH</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">sensor_door</span>
+                    Gate Timur (Scan 2)
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-primary-fixed transition-colors" title="Lihat Daftar Siswa Rombel">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container transition-colors" title="Edit Rombel">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container hover:text-on-surface transition-colors" title="Menu Lainnya">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: XII TKJ 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded text-primary focus:ring-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold group-hover:text-primary transition-colors">XII TKJ 1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lab Jaringan Cisco • R.301</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col items-start gap-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Tingkat XII</span>
+<span class="font-label-sm text-label-sm text-secondary truncate max-w-[150px]">Teknik Komputer &amp; Jaringan</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-md text-label-md font-bold shrink-0">
+                      KE
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Kurniawan Eko, S.T</span>
+<span class="font-label-sm text-label-sm text-outline font-mono truncate">NIP. 198007232007011019</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-mono font-semibold text-on-surface">35 / 36</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-medium text-[10px]">1 Sisa</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 97.2%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">sensor_door</span>
+                    Gate Utama (Scan 3)
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-primary-fixed transition-colors" title="Lihat Daftar Siswa Rombel">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container transition-colors" title="Edit Rombel">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container hover:text-on-surface transition-colors" title="Menu Lainnya">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: XII TKJ 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded text-primary focus:ring-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold group-hover:text-primary transition-colors">XII TKJ 2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lab Fiber Optik • R.302</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col items-start gap-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Tingkat XII</span>
+<span class="font-label-sm text-label-sm text-secondary truncate max-w-[150px]">Teknik Komputer &amp; Jaringan</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-md text-label-md font-bold shrink-0">
+                      TS
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Tri Santoso, M.Pd</span>
+<span class="font-label-sm text-label-sm text-outline font-mono truncate">NIP. 197608122003011005</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-mono font-semibold text-on-surface">36 / 36</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed/50 text-tertiary-container font-bold text-[10px]">PENUH</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">sensor_door</span>
+                    Gate Utama (Scan 3)
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-primary-fixed transition-colors" title="Lihat Daftar Siswa Rombel">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container transition-colors" title="Edit Rombel">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container hover:text-on-surface transition-colors" title="Menu Lainnya">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: XII TKR 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded text-primary focus:ring-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold group-hover:text-primary transition-colors">XII TKR 1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bengkel Otomotif A • Zona Mesin</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col items-start gap-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Tingkat XII</span>
+<span class="font-label-sm text-label-sm text-secondary truncate max-w-[150px]">Teknik Kendaraan Ringan</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-md text-label-md font-bold shrink-0">
+                      AW
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Agus Waluyo, S.Pd</span>
+<span class="font-label-sm text-label-sm text-outline font-mono truncate">NIP. 197905152006041014</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-mono font-semibold text-on-surface">35 / 36</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-medium text-[10px]">1 Sisa</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 97.2%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">sensor_door</span>
+                    Gate Barat (Scan 4)
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-primary-fixed transition-colors" title="Lihat Daftar Siswa Rombel">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container transition-colors" title="Edit Rombel">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container hover:text-on-surface transition-colors" title="Menu Lainnya">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: XI TKR 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded text-primary focus:ring-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold group-hover:text-primary transition-colors">XI TKR 2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bengkel Otomotif B • Zona Chasis</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col items-start gap-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Tingkat XI</span>
+<span class="font-label-sm text-label-sm text-secondary truncate max-w-[150px]">Teknik Kendaraan Ringan</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-label-md text-label-md font-bold shrink-0">
+                      DS
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Dedi Supriyadi, S.T</span>
+<span class="font-label-sm text-label-sm text-outline font-mono truncate">NIP. 198303102009011008</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col gap-1 w-32">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="font-mono font-semibold text-on-surface">36 / 36</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed/50 text-tertiary-container font-bold text-[10px]">PENUH</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">sensor_door</span>
+                    Gate Barat (Scan 4)
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-primary-fixed transition-colors" title="Lihat Daftar Siswa Rombel">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container transition-colors" title="Edit Rombel">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container hover:text-on-surface transition-colors" title="Menu Lainnya">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>Menampilkan 1 - 8 dari total 24 rombel</span>
+<span class="text-outline">•</span>
+<span>Halaman 1 dari 3</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-outline cursor-not-allowed font-label-sm text-label-sm">Sebelumnya</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container-low font-label-sm text-label-sm flex items-center justify-center transition-colors">2</button>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container-low font-label-sm text-label-sm flex items-center justify-center transition-colors">3</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm transition-colors">Berikutnya</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Sub-Panels: Distribusi Siswa & Gate Mapping (Span 4) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Visual Distribusi Siswa per Jurusan Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">pie_chart</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">Komposisi Siswa &amp; Jurusan</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Real-time</span>
+</div>
+<!-- SVG Donut Chart Minimalist Graphic -->
+<div class="flex items-center justify-center py-2">
+<div class="relative w-40 h-40 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<!-- Background ring -->
+<circle class="text-surface-container" cx="50" cy="50" fill="none" r="38" stroke="currentColor" stroke-width="12"></circle>
+<!-- RPL Segment (34%) -> 34 * 2.387 = ~81.2 -->
+<circle class="text-primary" cx="50" cy="50" fill="none" r="38" stroke="currentColor" stroke-dasharray="81.2 238.7" stroke-dashoffset="0" stroke-width="12"></circle>
+<!-- TKJ Segment (33%) -> 33 * 2.387 = ~78.8 -->
+<circle class="text-secondary" cx="50" cy="50" fill="none" r="38" stroke="currentColor" stroke-dasharray="78.8 238.7" stroke-dashoffset="-81.2" stroke-width="12"></circle>
+<!-- TKR Segment (33%) -> 33 * 2.387 = ~78.8 -->
+<circle class="text-tertiary-container" cx="50" cy="50" fill="none" r="38" stroke="currentColor" stroke-dasharray="78.8 238.7" stroke-dashoffset="-160" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-md text-headline-md font-extrabold text-on-surface leading-tight">852</span>
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Total Siswa</span>
+</div>
+</div>
+</div>
+<!-- Legend Items -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-primary shrink-0"></span>
+<span class="font-label-md text-label-md text-on-surface">Rekayasa Perangkat Lunak (RPL)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-mono font-bold">286</span>
+<span class="font-label-sm text-label-sm text-outline">(33.6%)</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-secondary shrink-0"></span>
+<span class="font-label-md text-label-md text-on-surface">Teknik Komputer &amp; Jaringan (TKJ)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-mono font-bold">284</span>
+<span class="font-label-sm text-label-sm text-outline">(33.3%)</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-tertiary-container shrink-0"></span>
+<span class="font-label-md text-label-md text-on-surface">Teknik Kendaraan Ringan (TKR)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-mono font-bold">282</span>
+<span class="font-label-sm text-label-sm text-outline">(33.1%)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tautan Gerbang Presensi RFID Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">sensors</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">Pemetaan Gerbang Presensi</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Aktif 4 Gate</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Routing otomatis kartu RFID siswa berdasarkan kedekatan rombel ke zona pintu gerbang sekolah saat kedatangan 06.30 - 07.15 WIB.
+        </p>
+<!-- Gates List -->
+<div class="flex flex-col gap-space-sm">
+<!-- Gate Timur -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">door_front</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold">Gate Timur (TI / RPL)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Scanner 1 &amp; 2 • Rombel RPL</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-md text-label-md text-on-surface font-bold">8 Rombel</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Tersinkron</span>
+</div>
+</div>
+<!-- Gate Utama -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">sensor_door</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold">Gate Utama (Gedung Pusat)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Scanner 3 • Rombel TKJ</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-md text-label-md text-on-surface font-bold">8 Rombel</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Tersinkron</span>
+</div>
+</div>
+<!-- Gate Barat -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">garage</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold">Gate Barat (Area Bengkel)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Scanner 4 • Rombel TKR</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-md text-label-md text-on-surface font-bold">8 Rombel</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Tersinkron</span>
+</div>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">settings_input_antenna</span>
+<span>Kalibrasi &amp; Penugasan RFID Gate</span>
+</button>
+</div>
+<!-- Quick Guidance Banner -->
+<div class="bg-primary/5 p-space-md rounded-xl flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col gap-1">
+<span class="font-title-md text-title-md text-primary font-bold">Standar Rombel SMK Negeri</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Sesuai Permendikbudristek, kapasitas maksimal rombel SMK adalah 36 siswa per kelas. Rombel yang telah mencapai batas tidak dapat menerima mutasi masuk tanpa izin kurikulum.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleDropdown() {
+    var dd = document.getElementById('dropdownTambah');
+    if (dd) {
+      dd.classList.toggle('hidden');
+    }
+  }
+
+  // Close dropdown on outside click
+  window.addEventListener('click', function(e) {
+    var btn = document.getElementById('btnTambahKelas');
+    var dd = document.getElementById('dropdownTambah');
+    if (btn && dd && !btn.contains(e.target) && !dd.contains(e.target)) {
+      dd.classList.add('hidden');
+    }
+  });
+</script></main></div></body></html>
